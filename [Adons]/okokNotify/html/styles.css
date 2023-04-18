@@ -1,0 +1,141 @@
+body {
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.toast {
+    width: 100px;
+    float: right;
+}
+
+.wrapper {
+    width: 100px;
+    height: auto;
+    background-color: #1e1e1e;
+    float: right;
+}
+
+.main {
+    margin: 12px 16px 12px 56px;
+    position: relative;
+}
+
+.main::before {
+    font-size: 24px;
+    top: calc(50% - 12px);
+    left: -40px;
+    line-height: 24px;
+    position: absolute;
+}
+
+/* Success Notification*/
+
+.success-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    color: #47cf73;
+}
+
+.success {
+    background-color: rgba(20, 20, 20, 0.486);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    /*box-shadow: 0px 0px 25px rgb(13, 235, 5);*/
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    border-right: 3px solid rgb(235, 5, 5);
+    border-left: 3px solid rgb(235, 5, 5);
+    background: rgba(20, 20, 20, 0.486);
+	background-image: url(https://cdn.discordapp.com/attachments/955831405064114216/1069059216763007016/pngwing.com_7.png);
+    border-radius:5px;
+}
+
+/* Info Notification*/
+
+.info-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f05a";
+    color: #0066ff;
+}
+
+.info {
+    background-color: rgba(20, 20, 20, 0.486);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    /*box-shadow: 0px 0px 25px rgb(0, 110, 255);*/
+    text-shadow: 0px 0px 3px rgba(0, 110, 255);
+    border-right: 3px solid rgb(0, 110, 255);
+    border-left: 3px solid rgb(0, 110, 255);
+}
+
+/* Warning Notification */
+
+.warning-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\21";
+    color: #ffc107;
+}
+
+.warning {
+    background-color: rgba(20, 20, 20, 0.486);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    /*box-shadow: 0px 0px 25px rgb(238, 255, 0);*/
+    text-shadow: 0px 0px 3px rgba(238, 255, 0);
+    border-right: 3px solid rgb(238, 255, 0);
+    border-left: 3px solid rgb(238, 255, 0);
+}
+
+/* Error Notification */
+
+
+.error-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00d";
+    color: #dc3545;
+}
+
+.error {
+    background-color: rgba(20, 20, 20, 0.486);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    /*box-shadow: 0px 0px 25px rgb(255, 0, 0);*/
+    text-shadow: 0px 0px 3px rgba(255, 0, 0);
+    border-right: 3px solid rgb(255, 0, 0);
+    border-left: 3px solid rgb(255, 0, 0);
+}
+
+/* SMS Notification */
+
+.phonemessage-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f7cd";
+    color: rgb(255, 81, 0);
+}
+
+.phonemessage {
+    background-color: rgba(20, 20, 20, 0.486);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    /*box-shadow: 0px 0px 25px rgb(255, 81, 0);*/
+    text-shadow: 0px 0px 3px rgba(255, 81, 0);
+    border-right: 3px solid rgb(255, 81, 0);
+    border-left: 3px solid rgb(255, 81, 0);
+}
+
+/* Long Text Notification */
+
+.neutral-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f11c";
+    color: #6c757d;
+}
+
+.neutral {
+    background-color: rgba(20, 20, 20, 0.85);
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    /*box-shadow: 0px 0px 25px rgb(112, 104, 101);*/
+    border-right: 3px solid rgb(112, 104, 101);
+    border-left: 3px solid rgb(112, 104, 101);
+}

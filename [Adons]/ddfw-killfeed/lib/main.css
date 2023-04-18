@@ -1,0 +1,64 @@
+html,body {
+	/* background:#3e3c3c; */
+	background:transparent;
+}
+.multipoint {
+	display:none;
+}
+.multipoint#point-8 {
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+}
+.multipoint#point-8>img {
+	opacity:0.5;
+}
+.kill-feed {
+	position:absolute;
+	top:3vh;
+	right:2%;
+}
+.kill-feed>div {
+	padding:3px 6px 3px 6px;
+	margin:0;
+	display:inline-block;
+	float:left;
+	clear:both;
+    box-shadow: inset 0px -15px 10px -15px #500082, inset -15px 0px 10px -15px #500082;  
+    transform: skewX(-20deg);
+	line-height:18px;
+	font-size:15px;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	border-radius:4px;
+	background:rgba(0,0,0,0.5);
+	margin-bottom:6px;
+}
+.kill-feed div span {
+	vertical-align:middle;
+}
+.kill-feed div span.weapons>img {
+	border:none;
+	outline:none;
+	vertical-align:middle;
+	margin:0px 3px;
+}
+.kill-feed div>span.player {
+	font-family: 'Rajdhani', sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	margin:0 2px;
+}
+.kill-feed div>span.player.killer {
+	/* color:#4F9EDE; */
+	color: #ffffff;
+	padding-left:2px;
+}
+.kill-feed div>span.player.victim {
+	/* color:#C7A247; */
+	color: #e03232;
+	padding-right:4px;
+}
