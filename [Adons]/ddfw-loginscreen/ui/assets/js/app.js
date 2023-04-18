@@ -1,10 +1,3 @@
-/* 
-*Author: Uyuyorum
-*Description: Uyuyorum Loading Screen
-*Version: 1.0
-*Github: https://github.com/alp1x
-*Discord: https://discord.gg/cf6wkBFeYV
-*/
 
 window.addEventListener('DOMContentLoaded', () => {
     if(window.nuiHandoverData.umloginscreen == "steam"){

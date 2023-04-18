@@ -5,7 +5,7 @@ DDFWLoadingScreen.GithubRawUrl = "https://raw.githubusercontent.com/"+DDFWLoadin
 
 
 // DDFW-General Settings //
-DDFWLoadingScreen.ServerName = "DREAM LIFE PvP";
+DDFWLoadingScreen.ServerName = "DREAM LIFE Battleground";
 DDFWLoadingScreen.Logo = "logo.png";  //  ui/assets/img
 DDFWLoadingScreen.BackgroundImage = "bg1.png";  // ui/assets/img/bg
 DDFWLoadingScreen.TemplateColorHex = "#e92a3b";  // https://www.color-hex.com
@@ -19,6 +19,6 @@ DDFWLoadingScreen.RandomBackgroundImg = ['bg1.png','bg2.png','bg3.jpg','bg4.jpg'
 
 // DDFW-Lang Settings //
 DDFWLoadingScreen.Text1 = "Welcome,";
-DDFWLoadingScreen.Text2 = "New Updates";
+DDFWLoadingScreen.Text2 = "DLRP TEAM";
 DDFWLoadingScreen.Text3 = "© 2023 DDFW";
 
