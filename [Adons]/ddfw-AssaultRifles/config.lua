@@ -1,6 +1,6 @@
 print("^2DDFW^7-^2AssaultRiflesFight ^4^7^4 ^AssaultRifles Fight Script by ^1DARK DEVIL^7")
 Config = {
-    Weapon = 'weapon_carbinerifle',
+    Weapon = 'weapon_ak47',
     RemoveWeapon = false, -- if someone has the Weapon but isn't playing paintball, remove it. 
     RequiredPlayers = 1,
     JoinCircle = vector3(182.41, -908.78, 30.69),
@@ -21,7 +21,7 @@ Config = {
     WinnerPosition = vector3(-49.64, -1137.48, -1.2),
     WinnerHeading = 19.95,
     WinnerCam = vector3(-51.73, -1134.25, 2.5),
-    Price = 250,
+    Price = 25,
 
     Translations = {
         ['join_paintball'] = '[~g~E~w~] (costs ~g~$%s~w~) Join the Assault Rifles gun game queue\n%s',
