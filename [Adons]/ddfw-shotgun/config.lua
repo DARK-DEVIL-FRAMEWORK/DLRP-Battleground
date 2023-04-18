@@ -5,7 +5,7 @@ Config = {
     RequiredPlayers = 1,
     JoinCircle = vector3(190.46, -951.83, 30.09),
     QueueTime = 0.5, -- how long until the match starts (minutes)
-    MatchLength = 5, -- length of the match (minutes)
+    MatchLength = 10, -- length of the match (minutes)
     DisplayWinner = 10, -- how long to show who won (seconds)
     ForceFirstPerson = false, -- force first person?
     SpawnPoints = {
@@ -21,7 +21,7 @@ Config = {
     WinnerPosition = vector3(-49.64, -1137.48, -1.2),
     WinnerHeading = 19.95,
     WinnerCam = vector3(-51.73, -1134.25, 2.5),
-    Price = 250,
+    Price = 25,
 
     Translations = {
         ['join_paintball'] = '[~g~E~w~] (costs ~g~$%s~w~) Join the Shotgun gun game queue\n%s',
