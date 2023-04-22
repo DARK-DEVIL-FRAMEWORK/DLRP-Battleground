@@ -16,17 +16,17 @@ This is a **FREE** release!
 - Images for almost every gun / melee
 
 **Supplied Snippets**
-- qb-core
-- qb-weapons
-- qb-smallresources
-- qb-policejob
-- qb-jewelery
-- qb-ambulancejob
+- ddfw-core
+- ddfw-weapons
+- ddfw-smallresources
+- ddfw-policejob
+- ddfw-jewelery
+- ddfw-ambulancejob
 
 ## Installation
 - Put the ``custom_weapons`` into your ``resources`` folder.
 
-## Drop first code in ``qb-core/shared/items.lua``
+## Drop first code in ``ddfw-core/shared/items.lua``
 ```lua
 	-- Custom Weapons
 	['weapon_ak47'] 		 		 = {['name'] = 'weapon_ak47', 	 			  	['label'] = 'AK-47', 					['weight'] = 13000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_RIFLE',			['image'] = 'weapon_assaultrifle.png', 				['unique'] = true, 		['useable'] = false,["created"] = nil,	['description'] = 'A rapid-fire, magazine-fed automatic rifle designed for infantry use'},
@@ -60,7 +60,7 @@ This is a **FREE** release!
 	['weapon_colbaton'] 			 = {['name'] = 'weapon_colbaton', 		 	  	['label'] = 'PD Baton', 				['weight'] = 1000, 		['type'] = 'weapon', 	['ammotype'] = nil,						['image'] = 'weapon_colbaton.png', 	
 ```
 
-## Drop the next code in ``qb-core/shared/weapons.lua``
+## Drop the next code in ``ddfw-core/shared/weapons.lua``
 
 ```lua
 	[`weapon_ak47`] 		 = {['name'] = 'weapon_ak47', 	 	['label'] = 'AK-47', 				['ammotype'] = 'AMMO_RIFLE',	['damagereason'] = 'Ended / Rifled / Shot down / Floored'},
@@ -94,7 +94,7 @@ This is a **FREE** release!
 	[`weapon_colbaton`] 	 = {['name'] = 'weapon_colbaton', 		['label'] = 'Baton', 				['ammotype'] = nil,	            ['damagereason'] = 'Beat'},
 ```
 
-## Drop the next code in ``qb-weapons/config.lua``
+## Drop the next code in ``ddfw-weapons/config.lua``
 
 ```lua
     --Custom Weapons
@@ -126,7 +126,7 @@ This is a **FREE** release!
     ['weapon_aks74'] 			= 0.15,
     ['weapon_ak74'] 			= 0.15,
 ```
-## Drop the next code in ``qb-weapons/config.lua`` (about line 209)
+## Drop the next code in ``ddfw-weapons/config.lua`` (about line 209)
 
 ```lua
     ['WEAPON_M9'] = {
@@ -284,7 +284,7 @@ This is a **FREE** release!
     },
 ```
 
-## Replace the next code in ``qb-smallresources/client/weapdraw.lua``
+## Replace the next code in ``ddfw-smallresources/client/weapdraw.lua``
 
 ```lua
 local weapons = {
@@ -333,7 +333,7 @@ local holsterableWeapons = {
 }
 ```
 
-## Drop the next code in ``qb-smallresources/client/recoil.lua`` ( LINE 107 )
+## Drop the next code in ``ddfw-smallresources/client/recoil.lua`` ( LINE 107 )
 
 ```lua
 	-- CUSTOM WEAPONS
@@ -357,7 +357,7 @@ local holsterableWeapons = {
 	[GetHashKey("weapon_remington")] = 0.7,
 	[GetHashKey("weapon_scarh")] = 0.5,
 ```
-## Replace the next code in ``qb-jewelery/config.lua``
+## Replace the next code in ``ddfw-jewelery/config.lua``
 
 ```lua
 Config.WhitelistedWeapons = {
@@ -450,7 +450,7 @@ Config.WhitelistedWeapons = {
     },
 }
 ```
-## Replace the next code in ``qb-ambulancejob/config.lua``
+## Replace the next code in ``ddfw-ambulancejob/config.lua``
 
 ```lua
     --[[ HIGH CALIBER ]]
@@ -653,7 +653,7 @@ Config.WhitelistedWeapons = {
     [GetHashKey("weapon_scarh")] = "CLASS 3: Scar-H"
 ```
 
-## (OPTIONAL) Add the weapons to your police armory ``qb-policejob/config.lua``
+## (OPTIONAL) Add the weapons to your police armory ``ddfw-policejob/config.lua``
 
 ```lua
 Config.Items = {

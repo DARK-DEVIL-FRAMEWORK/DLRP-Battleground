@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['ddfw-core']:GetCoreObject()
 isLoggedIn = false
 
 local slots = 5 -- Range for the inventory check, begins in 1 an finish on slots value, hotbar's slots are 1-5 

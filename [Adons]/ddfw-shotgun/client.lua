@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['ddfw-core']:GetCoreObject()
 local playingShotgun = false
 local queuing = false
 local queueText = ''

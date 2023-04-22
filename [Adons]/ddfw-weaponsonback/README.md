@@ -1,4 +1,4 @@
-# qb-weaponsonback
+# ddfw-weaponsonback
 Simple weapons on back script
 
 Is a simple drag an drop resource, no changes need to be maded to any other script
@@ -17,4 +17,4 @@ Is a simple drag an drop resource, no changes need to be maded to any other scri
 
 - Add the following code to your server.cfg/resouces.cfg
 
-	ensure qb-weaponsonback
+	ensure ddfw-weaponsonback
