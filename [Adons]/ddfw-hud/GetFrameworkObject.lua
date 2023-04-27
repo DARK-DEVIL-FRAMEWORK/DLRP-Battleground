@@ -1,4 +1,4 @@
-function GetFrameWork()
+function GetFrameworkObject()
     local object = nil
     if Config.Framework == "esx" then
         while object == nil do
