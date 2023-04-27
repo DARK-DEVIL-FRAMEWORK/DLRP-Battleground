@@ -16,7 +16,6 @@ options = {
 targetoptions = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -26,10 +25,7 @@ targetoptions = {
       action: function,
       canInteract: function,
       job: string or table,
-      gang: string or table,
-      drawDistance: number,
-      drawColor: table,
-      successDrawColor: table
+      gang: string or table
     }
   },
   distance: float
@@ -46,7 +42,6 @@ targetoptions = {
     debugPoly = false, -- This is for enabling/disabling the drawing of the box, it accepts only a boolean value (true or false), when true it will draw the polyzone in green
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -64,9 +59,6 @@ targetoptions = {
         job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
         gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
         citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-        drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-        drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-        successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
       }
     },
     distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -82,7 +74,6 @@ exports['ddfw-target']:AddCircleZone("name", vector3(x, y, z), 1.5, { -- The nam
 }, {
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -100,9 +91,6 @@ exports['ddfw-target']:AddCircleZone("name", vector3(x, y, z), 1.5, { -- The nam
       job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
       gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
       citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-      drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-      drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-      successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
     }
   },
   distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -128,7 +116,6 @@ options = {
 targetoptions = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -138,10 +125,7 @@ targetoptions = {
       action: function,
       canInteract: function,
       job: string or table,
-      gang: string or table,
-      drawDistance: number,
-      drawColor: table,
-      successDrawColor: table
+      gang: string or table
     }
   },
   distance: float
@@ -162,7 +146,6 @@ targetoptions = {
     maxZ = 38.9, -- This is the top of the boxzone, this can be different from the Z value in the coords, this has to be a float value
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -180,9 +163,6 @@ targetoptions = {
         job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
         gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
         citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-        drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-        drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-        successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
       }
     },
     distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -201,7 +181,6 @@ exports['ddfw-target']:AddBoxZone("name", vector3(x, y, z), 1.5, 1.6, { -- The n
 }, {
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -219,9 +198,6 @@ exports['ddfw-target']:AddBoxZone("name", vector3(x, y, z), 1.5, 1.6, { -- The n
       job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
       gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
       citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-      drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-      drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-      successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
     }
   },
   distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -250,7 +226,6 @@ options = {
 targetoptions = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -260,10 +235,7 @@ targetoptions = {
       action: function,
       canInteract: function,
       job: string or table,
-      gang: string or table,
-      drawDistance: number,
-      drawColor: table,
-      successDrawColor: table
+      gang: string or table
     }
   },
   distance: float
@@ -283,7 +255,6 @@ targetoptions = {
     maxZ = 38.9, -- This is the top of the boxzone, this can be different from the Z value in the coords, this has to be a float value
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -301,9 +272,6 @@ targetoptions = {
         job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
         gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
         citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-        drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-        drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-        successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
       }
     },
     distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -324,7 +292,6 @@ exports['ddfw-target']:AddPolyZone("name", points, {
 }, {
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -342,9 +309,6 @@ exports['ddfw-target']:AddPolyZone("name", points, {
       job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
       gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
       citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-      drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-      drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-      successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
     }
   },
   distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -369,7 +333,6 @@ options = {
 targetoptions = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -379,10 +342,7 @@ targetoptions = {
       action: function,
       canInteract: function,
       job: string or table,
-      gang: string or table,
-      drawDistance: number,
-      drawColor: table,
-      successDrawColor: table
+      gang: string or table
     }
   },
   distance: float
@@ -407,7 +367,6 @@ exports['ddfw-target']:AddComboZone(zones, {
 }, {
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -425,9 +384,6 @@ exports['ddfw-target']:AddComboZone(zones, {
       job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
       gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
       citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-      drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-      drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-      successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
     }
   },
   distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -445,7 +401,6 @@ AddTargetBone(bones: table or string, parameters: table)
 parameters = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -469,7 +424,6 @@ parameters = {
     bones = {'boot', 'bonnet'} -- This is your bones table, this specifies all the bones that have to be added to the targetoptions, this can be a string or a table
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -503,7 +457,6 @@ local bones = {
 exports['ddfw-target']:AddTargetBone(bones, { -- The bones can be a string or a table
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -537,7 +490,6 @@ AddTargetEntity(entity: number or table, parameters: table)
 parameters = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -567,7 +519,6 @@ CreateThread(function()
   exports['ddfw-target']:AddTargetEntity(entity, { -- The specified entity number
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -607,7 +558,6 @@ options = {
 targetoptions = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -617,10 +567,7 @@ targetoptions = {
       action: function,
       canInteract: function,
       job: string or table,
-      gang: string or table,
-      drawDistance: number,
-      drawColor: table,
-      successDrawColor: table
+      gang: string or table
     }
   },
   distance: float
@@ -639,11 +586,10 @@ CreateThread(function()
   local entity = CreatePed(0, model, GetEntityCoords(PlayerPedId()), GetEntityHeading(PlayerPedId()), true, false)
   exports['ddfw-target']:AddEntityZone("name", entity, { -- The specified entity number
     name = "name", -- This is the name of the zone recognized by PolyZone, this has to be unique so it doesn't mess up with other zones
-    debugPoly = false, -- This is for enabling/disabling the drawing of the box, it accepts only a boolean value (true or false), when true it will draw the polyzone in green
+    debugPoly = false, -- This is for enabling/disabling the drawing of the box, it accepts only a boolean value (true or false), when true it will draw the polyzone in green 
   }, {
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -661,9 +607,6 @@ CreateThread(function()
         job = 'police', -- This is the job, this option won't show up if the player doesn't have this job, this can also be done with multiple jobs and grades, if you want multiple jobs you always need a grade with it: job = {["police"] = 0, ["ambulance"] = 2},
         gang = 'ballas', -- This is the gang, this option won't show up if the player doesn't have this gang, this can also be done with multiple gangs and grades, if you want multiple gangs you always need a grade with it: gang = {["ballas"] = 0, ["thelostmc"] = 2},
         citizenid = 'JFD98238', -- This is the citizenid, this option won't show up if the player doesn't have this citizenid, this can also be done with multiple citizenid's, if you want multiple citizenid's there is a specific format to follow: citizenid = {["JFD98238"] = true, ["HJS29340"] = true},
-        drawDistance = 10.0, -- This is the distance for the sprite to draw if Config.DrawSprite is enabled, this is in GTA Units (OPTIONAL)
-        drawColor = {255, 255, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
-        successDrawColor = {30, 144, 255, 255}, -- This is the color of the sprite if Config.DrawSprite is enabled, this will change the color for this PolyZone only, if this is not present, it will fallback to Config.DrawColor, for more information, check the comment above Config.DrawColor (OPTIONAL)
       }
     },
     distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
@@ -681,7 +624,6 @@ AddTargetModel(models: string or table, parameters: table)
 parameters = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -707,7 +649,6 @@ parameters = {
     }
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -740,7 +681,6 @@ local models = {
 exports['ddfw-target']:AddTargetModel(models, { -- This defines the models, can be a string or a table
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -830,7 +770,6 @@ AddGlobalPed(parameters: table)
 parameters = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -852,7 +791,6 @@ parameters = {
 ```lua
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -881,7 +819,6 @@ parameters = {
 exports['ddfw-target']:AddGlobalPed({
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -915,7 +852,6 @@ AddGlobalVehicle(parameters: table)
 parameters = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -937,7 +873,6 @@ parameters = {
 ```lua
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -966,7 +901,6 @@ parameters = {
 exports['ddfw-target']:AddGlobalVehicle({
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1000,7 +934,6 @@ AddGlobalObject(parameters: table)
 parameters = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -1022,7 +955,6 @@ parameters = {
 ```lua
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1051,7 +983,6 @@ parameters = {
 exports['ddfw-target']:AddGlobalObject({
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1085,7 +1016,6 @@ AddGlobalPlayer(parameters: table)
 parameters = {
   options = {
     {
-      num: number,
       type: string,
       event: string,
       icon: string,
@@ -1107,7 +1037,6 @@ parameters = {
 ```lua
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1136,7 +1065,6 @@ parameters = {
 exports['ddfw-target']:AddGlobalPlayer({
   options = { -- This is your options table, in this table all the options will be specified for the target to accept
     { -- This is the first table with options, you can make as many options inside the options table as you want
-      num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
       type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
       event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
       icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1244,9 +1172,9 @@ RaycastCamera(flag: number, playerCoords: vector3) -- Preferably 30 or -1, -1 wi
 CreateThread(function()
   while true do
     local curFlag = 30
-    local coords, distance, entity, entityType = exports['ddfw-target']:RaycastCamera(-1, GetEntityCoords(PlayerPedId()))
+    local coords, entity, entityType = exports['ddfw-target']:RaycastCamera(-1, GetEntityCoords(PlayerPedId()))
     if entityType > 0 then
-      print('Got an entity')
+      print('gotten')
     end
     if curFlag = 30 then curFlag = -1 else curFlag = 30 end
     Wait(100)
@@ -1273,21 +1201,10 @@ datatable = {
   anim: string,
   flag: number,
   scenario: string,
-  pedrelations = {
-    groupname: string or number,
-    toowngroup: number,
-    toplayer: number
-  },
-  weapon = {
-    name: string or number,
-    ammo: number,
-    hidden: boolean
-  },
   target = {
     useModel: boolean,
     options = {
       {
-        num: number,
         type: string,
         event: string,
         icon: string,
@@ -1302,8 +1219,7 @@ datatable = {
     },
     distance: float
   },
-  currentpednumber: number,
-  action: function
+  currentpednumber: number
 }
 
 -- This is for multiple peds
@@ -1319,21 +1235,10 @@ datatable = {
     anim: string,
     flag: number,
     scenario: string,
-    pedrelations = {
-      groupname: string or number,
-      toowngroup: number,
-      toplayer: number
-    },
-    weapon = {
-      name: string or number,
-      ammo: number,
-      hidden: boolean
-    },
     target = {
       useModel: boolean,
       options = {
         {
-          num: number,
           type: string,
           event: string,
           icon: string,
@@ -1348,8 +1253,7 @@ datatable = {
       },
       distance: float
     },
-    currentpednumber: number,
-    action: function
+    currentpednumber: number
   }
 }
 ```
@@ -1369,21 +1273,10 @@ datatable = {
   anim = 'csb_abigail_dual-0', -- This is the animation that will play chosen from the animDict, this will loop the whole time the ped is spawned (OPTIONAL)
   flag = 1, -- This is the flag of the animation to play, for all the flags, check the TaskPlayAnim native here https://docs.fivem.net/natives/?_0x5AB552C6 (OPTIONAL)
   scenario = 'WORLD_HUMAN_AA_COFFEE', -- This is the scenario that will play the whole time the ped is spawned, this cannot pair with anim and animDict (OPTIONAL)
-  pedrelations = { -- This is the relationship group the ped is apart of, this can be either a custom relationship group or a preexisting one.
-    groupname = 'AMBIENT_GANG_BALLAS',
-    toowngroup = 0, -- relation to their own group defined above.
-    toplayer = 3,  -- relationship to the player. Check values of this native here https://docs.fivem.net/natives/?_0xBF25EB89375A37AD
-  },
-  weapon = { -- This is the ped's weapon table, here you can specify what weapon, the ammo and if the weapon is hidden or not (OPTIONAL)
-    name = 'weapon_carbinerifle', -- This is the weapon weapon that you would like to give the spawned ped
-    ammo = 0, -- This is the amount of ammo you would like for the ped to have
-    hidden = false, -- This is whether or not the weapon will be visibly displayed on the ped when spawned
-  },
   target = { -- This is the target options table, here you can specify all the options to display when targeting the ped (OPTIONAL)
     useModel = false, -- This is the option for which target function to use, when this is set to true it'll use AddTargetModel and add these to al models of the given ped model, if it is false it will only add the options to this specific ped
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1406,9 +1299,6 @@ datatable = {
     distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
   },
   currentpednumber = 0, -- This is the current ped number, this will be assigned when spawned, you can leave this out because it will always be created (OPTIONAL)
-  action = function(spawnedPedData) -- This is a action that performs upon ped spawn, supplying the data used to spawn the ped OPTIONAL
-    TriggerEvent('testing:event', 'test') -- Triggers a client event called testing:event and sends the argument 'test' with it
-  end,
 },
 ```
 
@@ -1427,21 +1317,10 @@ exports['ddfw-target']:SpawnPed({
   anim = 'csb_abigail_dual-0', -- This is the animation that will play chosen from the animDict, this will loop the whole time the ped is spawned (OPTIONAL)
   flag = 1, -- This is the flag of the animation to play, for all the flags, check the TaskPlayAnim native here https://docs.fivem.net/natives/?_0x5AB552C6 (OPTIONAL)
   scenario = 'WORLD_HUMAN_AA_COFFEE', -- This is the scenario that will play the whole time the ped is spawned, this cannot pair with anim and animDict (OPTIONAL)
-  pedrelations = { -- This is the relationship group the ped is apart of, this can be either a custom relationship group or a preexisting one.
-    groupname = 'AMBIENT_GANG_BALLAS',
-    toowngroup = 0, -- relation to their own group defined above.
-    toplayer = 3,  -- relationship to the player. Check values of this native here https://docs.fivem.net/natives/?_0xBF25EB89375A37AD
-  },
-  weapon = { -- This is the ped's weapon table, here you can specify what weapon, the ammo and if the weapon is hidden or not (OPTIONAL)
-    name = 'weapon_carbinerifle', -- This is the weapon weapon that you would like to give the spawned ped
-    ammo = 0, -- This is the amount of ammo you would like for the ped to have
-    hidden = false, -- This is whether or not the weapon will be visibly displayed on the ped when spawned
-  },
   target = { -- This is the target options table, here you can specify all the options to display when targeting the ped (OPTIONAL)
     useModel = false, -- This is the option for which target function to use, when this is set to true it'll use AddTargetModel and add these to al models of the given ped model, if it is false it will only add the options to this specific ped
     options = { -- This is your options table, in this table all the options will be specified for the target to accept
       { -- This is the first table with options, you can make as many options inside the options table as you want
-        num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
         type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
         event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
         icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1464,9 +1343,6 @@ exports['ddfw-target']:SpawnPed({
     distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
   },
   currentpednumber = 0, -- This is the current ped number, this will be assigned when spawned, you can leave this out because it will always be created (OPTIONAL)
-  action = function(spawnedPedData) -- This is a action that performs upon ped spawn, supplying the data used to spawn the ped OPTIONAL
-    TriggerEvent('testing:event', 'test') -- Triggers a client event called testing:event and sends the argument 'test' with it
-  end,
 })
 
 -- This is for multiple peds, here I used 2 of the same peds
@@ -1482,21 +1358,10 @@ exports['ddfw-target']:SpawnPed({
     anim = 'csb_abigail_dual-0', -- This is the animation that will play chosen from the animDict, this will loop the whole time the ped is spawned (OPTIONAL)
     flag = 1, -- This is the flag of the animation to play, for all the flags, check the TaskPlayAnim native here https://docs.fivem.net/natives/?_0x5AB552C6 (OPTIONAL)
     scenario = 'WORLD_HUMAN_AA_COFFEE', -- This is the scenario that will play the whole time the ped is spawned, this cannot pair with anim and animDict (OPTIONAL)
-    pedrelations = { -- This is the relationship group the ped is apart of, this can be either a custom relationship group or a preexisting one.
-      groupname = 'AMBIENT_GANG_BALLAS',
-      toowngroup = 0, -- relation to their own group defined above.
-      toplayer = 3,  -- relationship to the player. Check values of this native here https://docs.fivem.net/natives/?_0xBF25EB89375A37AD
-    },
-    weapon = { -- This is the ped's weapon table, here you can specify what weapon, the ammo and if the weapon is hidden or not (OPTIONAL)
-      name = 'weapon_carbinerifle', -- This is the weapon weapon that you would like to give the spawned ped
-      ammo = 0, -- This is the amount of ammo you would like for the ped to have
-      hidden = false, -- This is whether or not the weapon will be visibly displayed on the ped when spawned
-    },
     target = { -- This is the target options table, here you can specify all the options to display when targeting the ped (OPTIONAL)
       useModel = false, -- This is the option for which target function to use, when this is set to true it'll use AddTargetModel and add these to al models of the given ped model, if it is false it will only add the options to this specific ped
       options = { -- This is your options table, in this table all the options will be specified for the target to accept
         { -- This is the first table with options, you can make as many options inside the options table as you want
-          num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
           type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
           event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
           icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1519,9 +1384,6 @@ exports['ddfw-target']:SpawnPed({
       distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
     },
     currentpednumber = 0, -- This is the current ped number, this will be assigned when spawned, you can leave this out because it will always be created (OPTIONAL)
-    action = function(spawnedPedData) -- This is a action that performs upon ped spawn, supplying the data used to spawn the ped OPTIONAL
-      TriggerEvent('testing:event', 'test') -- Triggers a client event called testing:event and sends the argument 'test' with it
-    end,
   },
   [2] = {
     model = 'a_m_m_indian_01', -- This is the ped model that is going to be spawning at the given coords
@@ -1534,21 +1396,10 @@ exports['ddfw-target']:SpawnPed({
     anim = 'csb_abigail_dual-0', -- This is the animation that will play chosen from the animDict, this will loop the whole time the ped is spawned (OPTIONAL)
     flag = 1, -- This is the flag of the animation to play, for all the flags, check the TaskPlayAnim native here https://docs.fivem.net/natives/?_0x5AB552C6 (OPTIONAL)
     scenario = 'WORLD_HUMAN_AA_COFFEE', -- This is the scenario that will play the whole time the ped is spawned, this cannot pair with anim and animDict (OPTIONAL)
-    pedrelations = { -- This is the relationship group the ped is apart of, this can be either a custom relationship group or a preexisting one.
-      groupname = 'AMBIENT_GANG_BALLAS',
-      toowngroup = 0, -- relation to their own group defined above.
-      toplayer = 3,  -- relationship to the player. Check values of this native here https://docs.fivem.net/natives/?_0xBF25EB89375A37AD
-    },
-    weapon = { -- This is the ped's weapon table, here you can specify what weapon, the ammo and if the weapon is hidden or not (OPTIONAL)
-      name = 'weapon_carbinerifle', -- This is the weapon weapon that you would like to give the spawned ped
-      ammo = 0, -- This is the amount of ammo you would like for the ped to have
-      hidden = false, -- This is whether or not the weapon will be visibly displayed on the ped when spawned
-    },
     target = { -- This is the target options table, here you can specify all the options to display when targeting the ped (OPTIONAL)
       useModel = false, -- This is the option for which target function to use, when this is set to true it'll use AddTargetModel and add these to al models of the given ped model, if it is false it will only add the options to this specific ped
       options = { -- This is your options table, in this table all the options will be specified for the target to accept
         { -- This is the first table with options, you can make as many options inside the options table as you want
-          num = 1, -- This is the position number of your option in the list of options in the ddfw-target context menu (OPTIONAL)
           type = "client", -- This specifies the type of event the target has to trigger on click, this can be "client", "server", "command" or "qbcommand", this is OPTIONAL and will only work if the event is also specified
           event = "Test:Event", -- This is the event it will trigger on click, this can be a client event, server event, command or qbcore registered command, NOTICE: Normal command can't have arguments passed through, QBCore registered ones can have arguments passed through
           icon = 'fas fa-example', -- This is the icon that will display next to this trigger option
@@ -1571,9 +1422,6 @@ exports['ddfw-target']:SpawnPed({
       distance = 2.5, -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
     },
     currentpednumber = 0, -- This is the current ped number, this will be assigned when spawned, you can leave this out because it will always be created (OPTIONAL)
-    action = function(spawnedPedData) -- This is a action that performs upon ped spawn, supplying the data used to spawn the ped OPTIONAL
-      TriggerEvent('testing:event', 'test') -- Triggers a client event called testing:event and sends the argument 'test' with it
-    end,
   }
 })
 ```

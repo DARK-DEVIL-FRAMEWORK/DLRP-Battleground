@@ -130,7 +130,7 @@ Config.Locations = {
 		},
 		["logo"] = "https://cdn.discordapp.com/attachments/1072246335576744028/1094223969437102232/banner.gif",
         ["coords"] = {
-            vector4(180.8, -932.07, 30.94, 331.16),
+            vector4(262.08, -768.05, 30.93, 156.1),
 		},
         ["products"] = Config.Products["ammo"],
         ["blipsprite"] = 567,
@@ -152,7 +152,7 @@ Config.Locations = {
 		},
 		["logo"] = "https://cdn.discordapp.com/attachments/1072246335576744028/1094223969437102232/banner.gif",
         ["coords"] = {
-            vector4(175.64, -928.44, 30.94, 328.25), 
+            vector4(251.65, -764.55, 30.79, 168.11), 
 		},
         ["products"] = Config.Products["pistol"],
         ["blipsprite"] = 567,
@@ -173,7 +173,7 @@ Config.Locations = {
 		},
 		["logo"] = "https://cdn.discordapp.com/attachments/1072246335576744028/1094223969437102232/banner.gif",
         ["coords"] = {
-            vector4(173.13, -926.56, 30.94, 327.43), 
+            vector4(253.99, -765.4, 30.78, 159.7), 
 		},
         ["products"] = Config.Products["shotgun"],
         ["blipsprite"] = 567,
@@ -194,7 +194,7 @@ Config.Locations = {
 		},
 		["logo"] = "https://cdn.discordapp.com/attachments/1072246335576744028/1094223969437102232/banner.gif",
         ["coords"] = {
-            vector4(170.47, -924.67, 30.94, 329.63), 
+            vector4(248.89, -763.59, 30.8, 161.27), 
 		},
         ["products"] = Config.Products["assault"],
         ["blipsprite"] = 567,
@@ -216,7 +216,7 @@ Config.Locations = {
 		},
 		["logo"] = "https://cdn.discordapp.com/attachments/1072246335576744028/1094223969437102232/banner.gif",
         ["coords"] = {
-			vector4(178.21, -930.3, 30.94, 321.05),
+			vector4(256.87, -766.36, 30.77, 158.68),
 		},
         ["products"] = Config.Products["pharmacy"],
         ["blipsprite"] = 51,
