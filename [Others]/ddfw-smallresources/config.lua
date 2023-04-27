@@ -86,13 +86,13 @@ Config.disableHandsupControls = {24, 25, 47, 58, 59, 63, 64, 71, 72, 75, 140, 14
 Config.DisableAmbience = false -- Disabled distance sirens, distance car alarms, etc
 Config.HarnessUses = 20
 Config.DamageNeeded = 100.0 -- vehiclepush 0-1000
-Config.EnableProne = true -- prone isnt recomended at this time
+Config.EnableProne = false -- prone isnt recomended at this time
 Config.MapText = "DREAM LIFE PvP" -- This is the name / text shown above the map
 
 Config.Disable = {
     disableHudComponents = {1, 2, 3, 4, 7, 9, 13, 14, 19, 20, 21, 22}, -- Hud Components: https://docs.fivem.net/natives/?_0x6806C51AD12B83B8
     disableControls = {37}, -- Controls: https://docs.fivem.net/docs/game-references/controls/
-    displayAmmo = true -- false disables ammo display
+    displayAmmo = false -- false disables ammo display
 }
 
 Config.ConsumablesEat = {
