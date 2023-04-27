@@ -144,3 +144,9 @@ Citizen.CreateThread(function()
 	 	end
 	end
 end)
+
+local coords = vector3(236.71, -781.58, 30.65)
+
+local blip = AddBlipForRadius(coords, 100.0) -- need to have .0
+SetBlipColour(blip, 2)
+SetBlipAlpha(blip, 128)
