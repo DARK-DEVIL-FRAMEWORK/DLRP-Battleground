@@ -5,7 +5,7 @@
 --- Config ---
 
 local reviveTimer = 5 -- Change the amount of time to wait before allowing revive (in seconds)
-local respawnTimer = 3 -- Change the amount of time to wait before allowing revive (in seconds)
+local respawnTimer = 5 -- Change the amount of time to wait before allowing revive (in seconds)
 local reviveColor = "~y~" -- Color used for revive button
 local respawnColor = "~r~" -- Color used for respawn button
 local chatColor = "~b~" -- The chat color overall
