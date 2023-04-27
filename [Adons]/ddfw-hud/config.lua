@@ -16,11 +16,11 @@ Config.DefaultHudSize = 1.0 -- 0.5 - 1.3
 Config.EnableAmmoHud = true -- Determines if display ammo hud or nor
 Config.DefaultRefreshRate = 200 -- Refresh rate for vehicle hud
 Config.EnableHealth = true
-Config.EnableHunger = true
-Config.EnableThirst = true
+Config.EnableHunger = false
+Config.EnableThirst = false
 Config.EnableHud = true
 Config.EnableArmor = true
-Config.EnableStamina = true
+Config.EnableStamina = false
 Config.EnableSpeedometer = true
 
 
@@ -175,16 +175,16 @@ end
 
 -------------------------------------------- Stress --------------------------------------------
 
-Config.UseStress = true -- if you set this to false the stress hud will be removed
-Config.StressWhitelistJobs = { -- Add here jobs you want to disable stress 
-    'police', 'ambulance'
-}
+-- Config.UseStress = false -- if you set this to false the stress hud will be removed
+-- Config.StressWhitelistJobs = { -- Add here jobs you want to disable stress 
+--     'police', 'ambulance'
+-- }
 
-Config.WhitelistedWeaponStress = {
-    `weapon_petrolcan`,
-    `weapon_hazardcan`,
-    `weapon_fireextinguisher`
-}
+-- Config.WhitelistedWeaponStress = {
+--     `weapon_petrolcan`,
+--     `weapon_hazardcan`,
+--     `weapon_fireextinguisher`
+-- }
 
 Config.AddStress = {
     ["on_shoot"] = {

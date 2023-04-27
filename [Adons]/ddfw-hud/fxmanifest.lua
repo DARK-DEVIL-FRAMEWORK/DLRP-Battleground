@@ -14,7 +14,6 @@ client_scripts {
     'client/client.lua',
     'client/nitro.lua',
 
-    'client/stress.lua',
     'client/UpdateMoney.lua',
     'client/status.lua',
 }
@@ -24,7 +23,6 @@ server_scripts {
 	'GetFrameworkObject.lua',
     'server/server.lua',
     'server/PlayerLoaded.lua',
-    'server/stress.lua',
     'server/nitro.lua',
 }
 
