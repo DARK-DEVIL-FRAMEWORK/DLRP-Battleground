@@ -1,5 +1,6 @@
 local cam = nil
 local charPed = nil
+local loadScreenCheckState = false
 local QBCore = exports['ddfw-core']:GetCoreObject()
 
 -- Main Thread
@@ -34,16 +35,29 @@ local function skyCam(bool)
         FreezeEntityPosition(PlayerPedId(), false)
     end
 end
+
 local function openCharMenu(bool)
     QBCore.Functions.TriggerCallback("ddfw-multicharacter:server:GetNumberOfCharacters", function(result)
+        local translations = {}
+        for k in pairs(Lang.fallback and Lang.fallback.phrases or Lang.phrases) do
+            if k:sub(0, ('ui.'):len()) then
+                translations[k:sub(('ui.'):len() + 1)] = Lang:t(k)
+            end
+        end
         SetNuiFocus(bool, bool)
         SendNUIMessage({
             action = "ui",
+            customNationality = Config.customNationality,
             toggle = bool,
             nChar = result,
             enableDeleteButton = Config.EnableDeleteButton,
+            translations = translations
         })
         skyCam(bool)
+        if not loadScreenCheckState then
+            ShutdownLoadingScreenNui()
+            loadScreenCheckState = true
+        end
     end)
 end
 
@@ -128,17 +142,6 @@ RegisterNUICallback('cDataPed', function(nData, cb)
                         Wait(0)
                     end
                     charPed = CreatePed(2, model, Config.PedCoords.x, Config.PedCoords.y, Config.PedCoords.z - 0.98, Config.PedCoords.w, false, true)
-                    local  RandomAnimins = {     
-                        "WORLD_HUMAN_HANG_OUT_STREET",
-                        "WORLD_HUMAN_STAND_IMPATIENT",
-                        "WORLD_HUMAN_STAND_MOBILE",
-                        "WORLD_HUMAN_SMOKING_POT",
-                        "WORLD_HUMAN_LEANING",
-                        "WORLD_HUMAN_DRUG_DEALER_HARD"
-                    }
-                    local PlayAnimin = RandomAnimins[math.random(#RandomAnimins)] 
-                    SetPedCanPlayAmbientAnims(charPed, true)
-                    TaskStartScenarioInPlace(charPed, PlayAnimin, 0, true)
                     SetPedComponentVariation(charPed, 0, 0, 0, 2)
                     FreezeEntityPosition(charPed, false)
                     SetEntityInvincible(charPed, true)
@@ -149,6 +152,15 @@ RegisterNUICallback('cDataPed', function(nData, cb)
                 end)
             else
                 CreateThread(function()
+                    local randommodels = {
+                        "mp_m_freemode_01",
+                        "mp_f_freemode_01",
+                    }
+                    model = joaat(randommodels[math.random(1, #randommodels)])
+                    RequestModel(model)
+                    while not HasModelLoaded(model) do
+                        Wait(0)
+                    end
                     charPed = CreatePed(2, model, Config.PedCoords.x, Config.PedCoords.y, Config.PedCoords.z - 0.98, Config.PedCoords.w, false, true)
                     SetPedComponentVariation(charPed, 0, 0, 0, 2)
                     FreezeEntityPosition(charPed, false)
@@ -161,6 +173,15 @@ RegisterNUICallback('cDataPed', function(nData, cb)
         end, cData.citizenid)
     else
         CreateThread(function()
+            local randommodels = {
+                "mp_m_freemode_01",
+                "mp_f_freemode_01",
+            }
+            local model = joaat(randommodels[math.random(1, #randommodels)])
+            RequestModel(model)
+            while not HasModelLoaded(model) do
+                Wait(0)
+            end
             charPed = CreatePed(2, model, Config.PedCoords.x, Config.PedCoords.y, Config.PedCoords.z - 0.98, Config.PedCoords.w, false, true)
             SetPedComponentVariation(charPed, 0, 0, 0, 2)
             FreezeEntityPosition(charPed, false)
@@ -190,9 +211,9 @@ end)
 RegisterNUICallback('createNewCharacter', function(data, cb)
     local cData = data
     DoScreenFadeOut(150)
-    if cData.gender == "Male" then
+    if cData.gender == Lang:t("ui.male") then
         cData.gender = 0
-    elseif cData.gender == "Female" then
+    elseif cData.gender == Lang:t("ui.female") then
         cData.gender = 1
     end
     TriggerServerEvent('ddfw-multicharacter:server:createCharacter', cData)
@@ -202,6 +223,7 @@ end)
 
 RegisterNUICallback('removeCharacter', function(data, cb)
     TriggerServerEvent('ddfw-multicharacter:server:deleteCharacter', data.citizenid)
+    DeletePed(charPed)
     TriggerEvent('ddfw-multicharacter:client:chooseChar')
     cb("ok")
 end)

@@ -48,73 +48,35 @@ RegisterNetEvent('ddfw-houses:client:setHouseConfig', function(houseConfig)
     Houses = houseConfig
 end)
 
-
 RegisterNetEvent('ddfw-spawn:client:setupSpawns', function(cData, new, apps)
     if not new then
-        SetNuiFocus(false, false)
-        SendNUIMessage({
-            type = "ui",
-            status = false
-        })
-        choosingSpawn = false
-        Wait(500)
-        TriggerEvent("ddfw-spawnselector:opennui")
+        QBCore.Functions.TriggerCallback('ddfw-spawn:server:getOwnedHouses', function(houses)
+            local myHouses = {}
+            if houses ~= nil then
+                for i = 1, (#houses), 1 do
+                    myHouses[#myHouses+1] = {
+                        house = houses[i].house,
+                        label = Houses[houses[i].house].adress,
+                    }
+                end
+            end
+
+            Wait(500)
+            SendNUIMessage({
+                action = "setupLocations",
+                locations = QB.Spawns,
+                houses = myHouses,
+                isNew = new
+            })
+        end, cData.citizenid)
     elseif new then
         SendNUIMessage({
             action = "setupAppartements",
             locations = apps,
+            isNew = new
         })
     end
 end)
-
-
--- RegisterNetEvent('ddfw-spawn:client:setupSpawns', function(cData, new, apps)
---     if not new then
---         QBCore.Functions.TriggerCallback('ddfw-spawn:server:getOwnedHouses', function(houses)
---             local myHouses = {}
---             if houses ~= nil then
---                 for i = 1, (#houses), 1 do
---                     myHouses[#myHouses+1] = {
---                         house = houses[i].house,
---                         label = Houses[houses[i].house].adress,
---                     }
---                 end
---             end
---             Wait(500)
---             SendNUIMessage({
---                 action = "setupLocations",
---                 locations = QB.Spawns,
---                 houses = myHouses,
---                 isNew = new
---             })
---             local OldConfig = QB.Spawns
---             for i = 1, #OpenHouses do
---                 if OpenHouses[i].owner == cData.citizenid then
---                     if QB.Spawns[OpenHouses[i].house] then return end
---                     QB.Spawns[OpenHouses[i].house] = {
---                         coords = OpenHouses[i].spawn,
---                         location = OpenHouses[i].house,
---                         label = OpenHouses[i].house,
---                     }
---                 end
---             end
---             local NewConfig = QB.Spawns
---             QB.Spawns = OldConfig
---             Wait(500)
---             SendNUIMessage({
---                 action = "setupLocations",
---                 locations = NewConfig,
---                 houses = myHouses,
---             })
---         end, cData.citizenid)
---     elseif new then
---         SendNUIMessage({
---             action = "setupAppartements",
---             locations = apps,
---             isNew = new
---         })
---     end
--- end)
 
 -- NUI Callbacks
 

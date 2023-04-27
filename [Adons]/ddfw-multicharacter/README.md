@@ -26,19 +26,15 @@ Added support for setting default number of characters per player per Rockstar l
 - [ddfw-core](https://github.com/qbcore-framework/ddfw-core)
 - [ddfw-spawn](https://github.com/qbcore-framework/ddfw-spawn) - Spawn selector
 - [ddfw-apartments](https://github.com/qbcore-framework/ddfw-apartments) - For giving the player a apartment after creating a character.
-- [ddfw-clothing](https://github.com/qbcore-framework/ddfw-clothing) - For the character creation and saving outfits. 
+- [ddfw-clothing](https://github.com/qbcore-framework/ddfw-clothing) - For the character creation and saving outfits.
 - [ddfw-weathersync](https://github.com/qbcore-framework/ddfw-weathersync) - For adjusting the weather while player is creating a character.
 
-Can also be used with my other reskins
-- [ddfw-clothing](https://github.com/ST4LTH/ddfw-clothing)
-
 ## Screenshots
-![Character Selection](https://i.imgur.com/jPxFucu.jpeg)
-![Character Registration](https://i.imgur.com/s2PWtHL.jpeg)
-![Character Deletion](https://i.imgur.com/YBiLgs2.jpeg)
+![Character Selection](https://cdn.discordapp.com/attachments/934470871333105674/1014215694394589294/unknown.png)
+![Character Registration](https://cdn.discordapp.com/attachments/934470871333105674/1014215687700488304/unknown.png)
 
 ## Features
-- Ability to create up to 4 characters and delete any character.
+- Ability to create up to 5 characters and delete any character.
 - Ability to see character information during selection.
 
 ## Installation
@@ -53,5 +49,3 @@ ensure ddfw-apartments
 ensure ddfw-clothing
 ensure ddfw-weathersync
 ```
-"# ddfw-multicharacter" 
-"# ddfw-multicharacter" 
