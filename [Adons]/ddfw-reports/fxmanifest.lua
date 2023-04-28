@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 games { 'gta5' }
 
-author 'society'
+author 'DARK DEVIL'
 description 'Report System'
 version '1.0.0'
 
