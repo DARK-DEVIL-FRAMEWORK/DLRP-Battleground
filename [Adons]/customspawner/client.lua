@@ -4,7 +4,7 @@
 
 
 local menuPool = NativeUI.CreatePool()
-local mainMenu = NativeUI.CreateMenu('DLRP', "", 1420, 0) --  Enter Server Name/ Menu Name Here
+local mainMenu = NativeUI.CreateMenu('DDFW', "", 1420, 0) --  Enter Server Name/ Menu Name Here
 local submain = menuPool:AddSubMenu(mainMenu, 'Vehicle Spawner', "", 1420, 0)
 local vehiclesMenu = menuPool:AddSubMenu(submain, 'Vehicles', "", 1420, 0) -- Name whatever you'd like for categorization
 local policeVehiclesMenu = menuPool:AddSubMenu(vehiclesMenu, 'Cars',"", 1420, 0)
