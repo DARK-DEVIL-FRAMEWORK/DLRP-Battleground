@@ -4,7 +4,7 @@
 
 **Have to Add : PVP MultiCharacter**
 
-**QBCore Base **
+**QBCore Base**
 
 **Not finished yet**
 
