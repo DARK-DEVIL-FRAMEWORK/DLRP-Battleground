@@ -1,4 +1,4 @@
-** • DEVELOPER : DARK DEVIL **
+**• DEVELOPER : DARK DEVIL**
 
 **Work Done 30% of 100% .. • But still it is able to set as PVP**
 
