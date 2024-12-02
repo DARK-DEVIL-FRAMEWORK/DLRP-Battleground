@@ -10,4 +10,8 @@
 
 **[Not Gonna be Finish]**
 
+**Too many things you  have to do**
+
+**You have to Do 70% of server work**
+
 **PVP Server**
