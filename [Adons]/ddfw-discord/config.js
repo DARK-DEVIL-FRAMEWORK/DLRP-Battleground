@@ -26,18 +26,18 @@ const DebugLogs = false;
 const EnableDiscordBot = true;
 
 // DISCORD BOT
-const DiscordBotToken = "MTA5NDIxNzQxNjk0MDE5MTgzNQ.GLqvmB.sWx0iixRtOUeAGo8MTKJQ7Z-ekJNLUQyAB_bSA";
-const DiscordGuildId = "1094209514015838248";
+const DiscordBotToken = " ";
+const DiscordGuildId = " ";
 
 // STAFF CHAT
-const EnableStaffChatForwarding = true;
+const EnableStaffChatForwarding = false;
 const DiscordStaffChannelId = "1082242685609463931";
 const AdditionalStaffChatRoleIds = [
     "1094224842682794194",
 ];
 
 // WHITELISTING / ALLOWLISTING
-const EnableWhitelistChecking = true;
+const EnableWhitelistChecking = false;
 const DiscordWhitelistRoleIds = "1094224780275765259";
 
 // SLASH COMMANDS / DISCORD PERMISSIONS
